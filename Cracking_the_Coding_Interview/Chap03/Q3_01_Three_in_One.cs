@@ -6,7 +6,7 @@ namespace ExChapter03
     public class Q3_01_Three_in_One
     {
 
-        #region FixedMultiStacka
+        #region FixedMultiStack
 
         private class FixedMultiStack
         {

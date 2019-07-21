@@ -31,7 +31,8 @@ namespace Cracking_the_Coding_Interview
             //Q2_08_Loop_Detection.Q2_08_Run();
 
             // Chapter 03. Linked Lists
-            Q3_01_Three_in_One.Q3_01_Run();
+            // Q3_01_Three_in_One.Q3_01_Run();
+            Q3_02_Stack_Min.Q3_02_Run();
         }
     }
 }

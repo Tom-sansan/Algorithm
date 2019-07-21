@@ -4,8 +4,12 @@
 			"path": "."
 		},
 		{
-			"path": "/Users/Tomoyasu/Documents/Project/Algorithm/CloudProjectForGit/Samples"
+			"path": "/Users/Tomoyasu/Documents/Project/CloudProjectForGit/sample"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"files.exclude": {
+			"**/.sample": true
+		}
+	}
 }
