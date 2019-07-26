@@ -32,7 +32,8 @@ namespace Cracking_the_Coding_Interview
 
             // Chapter 03. Linked Lists
             // Q3_01_Three_in_One.Q3_01_Run();
-            Q3_02_Stack_Min.Q3_02_Run();
+            // Q3_02_Stack_Min.Q3_02_Run();
+            Q3_03_Stack_of_Plates.Q03_03_Run();
         }
     }
 }
