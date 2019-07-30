@@ -142,15 +142,19 @@ namespace ExChapter03
         }
         public static void Q03_03_Run()
         {
-            int capacity_per_substack = 5;
-            SetOfStacks set = new SetOfStacks(capacity_per_substack);
+            int capacityPerSubstack = 5;
+            SetOfStacks set = new SetOfStacks(capacityPerSubstack);
             for (int i = 0; i < 34; i++)
             {
                 set.Push(i);
             }
+            Random rd = new Random();
+            int rdNum;
             for (int i = 0; i < 35; i++)
             {
-                Console.WriteLine("Popped " + set.Pop());
+                //Console.WriteLine("Popped " + set.Pop());
+                rdNum = rd.Next(capacityPerSubstack);
+                Console.WriteLine("Popped " + set.PopAt(rdNum));
             }
         }
     }
