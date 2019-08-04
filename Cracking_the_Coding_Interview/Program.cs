@@ -34,7 +34,8 @@ namespace Cracking_the_Coding_Interview
             // Q3_01_Three_in_One.Q3_01_Run();
             // Q3_02_Stack_Min.Q3_02_Run();
             // Q3_03_Stack_of_Plates.Q03_03_Run();
-            Q3_04_Queue_via_Stacks.Q03_04_Run();
+            // Q3_04_Queue_via_Stacks.Q03_04_Run();
+            Q3_05_Sort_Stack.Q03_05_Run();
         }
     }
 }
