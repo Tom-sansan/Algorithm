@@ -65,12 +65,14 @@ namespace ExChapter03
                 s.Push(r);
             }
 
-            Sort(s);
-
+            // Sort(s);
+            s = MergeSort(s);
             while(s.Count != 0)
             {
                 Console.WriteLine(s.Pop());
             }
+
+            
         }
     }
 }
