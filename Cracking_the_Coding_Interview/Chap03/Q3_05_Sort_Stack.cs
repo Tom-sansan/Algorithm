@@ -6,7 +6,14 @@ namespace ExChapter03
 {
     public class Q3_05_Sort_Stack
     {
-        public static Stack<int> MergeSort(Stack<int> inStack)
+        public static void MergeSortWork(Stack<int> inStack)
+        {
+            Stack<int> stack = MergeSort(inStack);
+            // Copy the elements back.
+            while (stack.Count != 0) inStack.Push(stack.Pop());
+        }
+
+        private static Stack<int> MergeSort(Stack<int> inStack)
         {
             if (inStack.Count <= 1)
             {
@@ -65,14 +72,12 @@ namespace ExChapter03
                 s.Push(r);
             }
 
-            // Sort(s);
-            s = MergeSort(s);
+            //Sort(s);
+            MergeSortWork(s);
             while(s.Count != 0)
             {
                 Console.WriteLine(s.Pop());
             }
-
-            
         }
     }
 }
