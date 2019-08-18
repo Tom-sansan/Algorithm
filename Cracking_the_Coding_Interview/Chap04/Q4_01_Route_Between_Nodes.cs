@@ -129,7 +129,6 @@ namespace ExChapter04
                     }
                     node.State = State.Visited;
                 }
-                
             }
             return false;
         }
