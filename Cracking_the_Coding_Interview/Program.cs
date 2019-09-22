@@ -40,7 +40,9 @@ namespace Cracking_the_Coding_Interview
             // Q3_06_Animal_Shelter.Q03_06_Run();
 
             // Ch 04. Trees and Graphs
-            Q4_01_Route_Between_Nodes.Q04_01_Run();
+            // Q4_01_Route_Between_Nodes.Q04_01_Run();
+            Q4_02_Minimal_Tree.Q04_02_Run_J();
+            // Q4_02_Minimal_Tree.Q04_02_Run_C();
         }
     }
 }

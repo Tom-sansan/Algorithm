@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using Ctci.Library;
 
 namespace ExChapter04
 {
