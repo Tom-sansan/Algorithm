@@ -32,17 +32,17 @@ namespace Ctci.Library
             if (right != null) right.Parent = this;
         }
 
-        private void insertInOrder(int d)
+        public void InsertInOrder(int d)
         {
             if (d <= this.Data)
             {
                 if (this.Left == null) setLeftChild(new TreeNodeJ(d));
-                else this.Left.insertInOrder(d);
+                else this.Left.InsertInOrder(d);
             }
             else
             {
                 if (this.Right == null) setRightChild(new TreeNodeJ(d));
-                else this.Right.insertInOrder(d);
+                else this.Right.InsertInOrder(d);
             }
             this.Size++;
         }

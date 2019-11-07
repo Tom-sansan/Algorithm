@@ -43,8 +43,9 @@ namespace Cracking_the_Coding_Interview
             // Q4_01_Route_Between_Nodes.Q04_01_Run();
             // Q4_02_Minimal_Tree.Q04_02_Run_J();
             // Q4_02_Minimal_Tree.Q04_02_Run_C();
-            Q4_03_List_of_Depths.Q04_03_Run_J();
+            // Q4_03_List_of_Depths.Q04_03_Run_J();
             // Q4_03_List_of_Depths.Q04_03_Run_C();
+            Q4_04_Check_Balanced.Q04_04_Run_J();
         }
     }
 }
