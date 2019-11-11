@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using Ctci.Library;
 
 
@@ -62,5 +61,24 @@ namespace ExChapter04
             root.InsertInOrder(4);  // Add 4 to make it unbalanced.
             Console.WriteLine("Is balanced? " + IsBalancedImproved(root));
         }
+
+        /* For Debug parameters
+        root
+        r
+        i.Current.Data
+        i.Current
+        Math.Max(GetHeight(root.Left), GetHeight(root.Right))
+        GetHeight(root.Left)
+        GetHeight(root.Right)
+        Math.Max(GetHeight(root.Left), GetHeight(root.Right)) + 1;
+        root.Data
+        root.Left.Data
+        root.Right.Data
+        IsBalanced(root.Left)
+        IsBalanced(root.Right)
+        Math.Max(leftHeight, rightHeight) + 1
+        CheckHeight(root)
+        CheckHeight(root) != int.MinValue
+        */
     }
 }

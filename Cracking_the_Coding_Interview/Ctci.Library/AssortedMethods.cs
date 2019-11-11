@@ -99,6 +99,18 @@ namespace Ctci.Library
             return head;
         }
 
+        public static TreeNodeJ RandomBST(int N, int min, int max)
+        {
+            int d = RandomIntInRange(min, max);
+            TreeNodeJ root = new TreeNodeJ(d);
+            for (int i = 1; i < N; i++)
+            {
+                root.InsertInOrder(RandomIntInRange(min, max));
+            }
+            return root;
+        }
+
+        // Creates tree by mapping the array left to right, top to bottom.
         public static TreeNodeJ CreateTreeFromArray(int[] array)
         {
             if (array.Length > 0)
