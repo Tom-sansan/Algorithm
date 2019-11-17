@@ -160,6 +160,7 @@ namespace ExChapter04
                     if (leftMax.Data > n.Data) return false;
                     min.Data = leftMin.Data;
                 }
+
                 if (n.Right == null) max.Data = n.Data;
                 else
                 {
@@ -197,15 +198,28 @@ namespace ExChapter04
                 /* Simple test -- create one */
                 int[] array = {int.MinValue, 3, 5, 6, 10, 13, 15, int.MaxValue};
                 TreeNodeJ node = TreeNodeJ.CreateMinimalBST(array);
-                //node.left.data = 6; // "ruin" the BST property by changing one of the elements
                 // node.Print();
-                bool isBst = CheckBST(node);
-                Console.WriteLine(isBst);
+                Console.WriteLine(CheckBST(node));
+                Console.WriteLine(CheckBSTAlternate(node));
                 /* Expect true:
                  6
               /     \
              /       \
             3        13
+           / \     /    \
+-2147483648   5   10    15
+                          \
+                        2147483647
+                */
+
+                node.Left.Data = 6; // "ruin" the BST property by changing one of the elements
+                Console.WriteLine(CheckBST(node));
+                Console.WriteLine(CheckBSTAlternate(node));
+                /* Expect false:
+                 6
+              /     \
+             /       \
+            6        13
            / \     /    \
 -2147483648   5   10    15
                           \
@@ -239,5 +253,19 @@ namespace ExChapter04
             Q4_05_CheckBST_A.Q04_05_Run_J_A();
             Q4_05_CheckBST_B.Q04_05_Run_J_B();
         }
+
+        /* For Debug parameters
+        n.Data
+        n.Left.Data
+        n.Right.Data
+        min != null
+        n.Data <= min
+        (min != null && n.Data <= min)
+        max != null
+        n.Data > max
+        (max != null && n.Data > max)
+        CheckBST(n.Left, min, n.Data)
+        CheckBST(n.Right, n.Data, max)
+        */
     }
 }
