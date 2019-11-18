@@ -42,6 +42,27 @@ namespace ExChapter04
                 if (next != null) Console.WriteLine(node.Data + "->" + next.Data);
                 else Console.WriteLine(node.Data + "->" + null);
             }
+
+            /* For Debug parameters
+            i
+            d
+            this.Data
+            this.Left.Data
+            this.Right.Data
+            array[i]
+            node.Data
+            next.Data
+            n.Data
+            n.Parent.Data
+            n.Left.Data
+            n.Right.Data
+            node.Data
+            node.Parent.Data
+            parent.Data
+            parent.Parent.Data
+            parent.Left.Data
+            parent.Left != node
+            */
         }
     }
 }
