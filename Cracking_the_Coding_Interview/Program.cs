@@ -49,7 +49,8 @@ namespace Cracking_the_Coding_Interview
             // Q4_05_Validate_BST.Q04_05_Run_J();
             // Q4_06_Successor.Q04_06_Run_J();
             // Q4_07_Build_Order.Q04_07_Run_J();
-            Q4_08_First_Common_Ancestor.Q04_08_Run_J();
+            // Q4_08_First_Common_Ancestor.Q04_08_Run_J();
+            Q4_09_BST_Sequences.Q04_09_Run_J();
         }
     }
 }
