@@ -52,7 +52,9 @@ namespace Cracking_the_Coding_Interview
             // Q4_08_First_Common_Ancestor.Q04_08_Run_J();
             // Q4_09_BST_Sequences.Q04_09_Run_J();
             // Q4_10_Check_Subtree.Q04_10_Run_J();
-            Q4_11_Random_Node.Q04_10_Run_J();
+            // Q4_11_Random_Node.Q04_11_Run_J();
+            Q4_12_Paths_with_Sum.Q04_12_Run_J();
+            // 
         }
     }
 }
