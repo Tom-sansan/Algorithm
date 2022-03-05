@@ -1,48 +1,47 @@
-n = int(input())
 
-# 今までに出てきたゾロ目数の数
-z = 0
-
-# 出力用変数
-ans2 = 0
-# 1 から 555555 までの整数をすべて調べる。調べている数を i とする
-for i in range(1, 555555 + 1):
-    # i がソロ目かどうか調べるために、i を文字列にした si を作る
-    si = str(i)
-    # i がゾロ目数だったかどうかを保存する変数
-    ok = True
-    # si の全ての文字が si の 0 文字目と同じかどうか
-    # si の 0 文字目と異なる文字が含まれていたら、i はゾロ目ではない
-    for s in si:
-        if s != si[0]:
-            ok = False
-    # i がゾロ目数のとき、出てきたゾロ目数の数を 1 増やす
-    if ok:
-        z += 1
-    # i がゾロ目数で、n 番目に出てきたゾロ目数ならば、答えとして保存する
-    if ok and z == n:
-        ans2 = i
-print(ans2)
+# 文字列 T が文字列 S にマッチするかどうかを判定する関数
+# マッチするときは True を、マッチしないときは False を返す
+def is_match(T, S):
+    # S の i 文字目から始まる部分が T とマッチするかどうか調べる
+    for i in range(0, len(S) - len(T) + 1):
+        # S の i 文字目から始まる部分が
+        # T とマッチしているかどうかを保持する変数
+        ok = True
+        # T の j 文字目と、S の i+j 文字目を見比べる
+        for j in range(0, len(T)):
+            # T の j 文字目が S の i+j 文字目と異なっていて、
+            # かつ、T の j 文字目が "." でもない場合、
+            # S の i 文字目から始まる部分は T とはマッチしない
+            if S[i + j] != T[j] and T[j] != ".":
+                ok = False
+        # S の i 文字目から始まる部分が T マッチしている場合、True を返す
+        if ok:
+            return True
+    # S の全ての部分について T とマッチしなかった場合、False を返す
+    return False
 
 
-N = int(input())
-# 今までに出てきたゾロ目数の数
-z = 0
-# 1 から 555555 までの整数を全て調べる。調べている数を iとする
-for i in range(1, 555555 + 1):
-    # i がゾロ目数かどうか調べるために、i を文字列にした si を作る
-    si = str(i)
-    # i がゾロ目数だったかどうかを保存する変数
-    ok = True
-    # si の全ての文字が si の 0 文字目と同じかどうかを調べる
-    # si の 0 文字目と同じ文字が含まれていたら、i はゾロ目数ではない
-    for s in si:
-        if s != si[0]:
-            ok = False
-    # i がゾロ目数のとき、出てきたゾロ目数の数を 1 増やす
-    if ok:
-        z += 1
-    # i がゾロ目数で、N 番目に出てきたゾロ目数ならば、答えとして保存する
-    if ok and z == N:
-        ans = i
-print(ans)
+S = input()
+# 使える文字の一覧
+C = "abcdefghijklmnopqrstuvwxyz."
+# 文字列 S とマッチする文字列を保持する配列
+M = []
+# 長さ 1 の文字列を全て調べ、S とマッチするものを M に入れる
+for T in C:
+    if is_match(T, S):
+        M.append(T)
+
+# 長さ 2 の文字列を全て調べ、S とマッチするものを M に入れる
+for c1 in C:
+    for c2 in C:
+        T = c1 + c2
+        if is_match(T, S):
+            M.append(T)
+# 長さ 3 の文字列を全て調べ、S とマッチするものを M に入れる
+for c1 in C:
+    for c2 in C:
+        for c3 in C:
+            T = c1 + c2 + c3
+            if is_match(T, S):
+                M.append(T)
+print(len(M))
