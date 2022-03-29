@@ -1,5 +1,8 @@
 # E - SNS Log
 # https://atcoder.jp/contests/past201912-open/tasks/past201912_e
+#################################
+# Anser 1
+#################################
 N, Q = map(int, input().split())
 
 # N 人のそれぞれがフォローしている配列
@@ -66,3 +69,4 @@ for i in range(0, N):
             msg += 'N'
     print(msg)
     msg = ''
+#################################
