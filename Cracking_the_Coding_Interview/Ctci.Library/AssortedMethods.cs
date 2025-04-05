@@ -1,5 +1,6 @@
 using System;
 using System.Text;
+using System.Collections.Generic;
 
 namespace Ctci.Library
 {
@@ -96,6 +97,51 @@ namespace Ctci.Library
                 current = new LinkedListNode(vals[i], null, current);
             }
             return head;
+        }
+
+        public static TreeNodeJ RandomBST(int N, int min, int max)
+        {
+            int d = RandomIntInRange(min, max);
+            TreeNodeJ root = new TreeNodeJ(d);
+            for (int i = 1; i < N; i++)
+            {
+                root.InsertInOrder(RandomIntInRange(min, max));
+            }
+            return root;
+        }
+
+        // Creates tree by mapping the array left to right, top to bottom.
+        public static TreeNodeJ CreateTreeFromArray(int[] array)
+        {
+            if (array.Length > 0)
+            {
+                TreeNodeJ root = new TreeNodeJ(array[0]);
+                Queue<TreeNodeJ> queue = new Queue<TreeNodeJ>();
+                queue.Enqueue(root);
+                bool done = false;
+                int i = 1;
+                while (!done)
+                {
+                    TreeNodeJ r = (TreeNodeJ)queue.Peek();
+                    if (r.Left == null)
+                    {
+                        r.Left = new TreeNodeJ(array[i]);
+                        i++;
+                        queue.Enqueue(r.Left);
+                    }
+                    else if (r.Right == null)
+                    {
+                        r.Right = new TreeNodeJ(array[i]);
+                        i++;
+                        queue.Enqueue(r.Right);
+                    }
+                    else queue.Dequeue();
+
+                    if (i == array.Length) done = true;
+                }
+                return root;
+            }
+            else return null;
         }
     }
 }

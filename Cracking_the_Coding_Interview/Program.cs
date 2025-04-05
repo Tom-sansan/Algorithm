@@ -41,8 +41,20 @@ namespace Cracking_the_Coding_Interview
 
             // Ch 04. Trees and Graphs
             // Q4_01_Route_Between_Nodes.Q04_01_Run();
-            Q4_02_Minimal_Tree.Q04_02_Run_J();
+            // Q4_02_Minimal_Tree.Q04_02_Run_J();
             // Q4_02_Minimal_Tree.Q04_02_Run_C();
+            // Q4_03_List_of_Depths.Q04_03_Run_J();
+            // Q4_03_List_of_Depths.Q04_03_Run_C();
+            // Q4_04_Check_Balanced.Q04_04_Run_J();
+            // Q4_05_Validate_BST.Q04_05_Run_J();
+            // Q4_06_Successor.Q04_06_Run_J();
+            // Q4_07_Build_Order.Q04_07_Run_J();
+            // Q4_08_First_Common_Ancestor.Q04_08_Run_J();
+            // Q4_09_BST_Sequences.Q04_09_Run_J();
+            // Q4_10_Check_Subtree.Q04_10_Run_J();
+            // Q4_11_Random_Node.Q04_11_Run_J();
+            Q4_12_Paths_with_Sum.Q04_12_Run_J();
+            // 
         }
     }
 }

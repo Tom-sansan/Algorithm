@@ -1,0 +1,5 @@
+Github
+https://github.com/kenkoooo/pastbook-source-code
+
+正誤表
+https://book.mynavi.jp/files/user/support/9784839972776past/アルゴリズム実技検定-対策テキスト%20-%20正誤表0412.pdf

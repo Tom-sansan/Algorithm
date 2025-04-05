@@ -12,12 +12,12 @@ namespace Ctci.Library
         public TreeNodeJ Left;
         public TreeNodeJ Right;
         public TreeNodeJ Parent;
-        private int Size = 0;
+        private int size = 0;
 
         public TreeNodeJ(int data)
         {
             this.Data = data;
-            Size = 1;
+            this.size = 1;
         }
 
         private void setLeftChild(TreeNodeJ left)
@@ -32,21 +32,25 @@ namespace Ctci.Library
             if (right != null) right.Parent = this;
         }
 
-        private void insertInOrder(int d)
+        public void InsertInOrder(int d)
         {
             if (d <= this.Data)
             {
                 if (this.Left == null) setLeftChild(new TreeNodeJ(d));
-                else this.Left.insertInOrder(d);
+                else this.Left.InsertInOrder(d);
             }
             else
             {
                 if (this.Right == null) setRightChild(new TreeNodeJ(d));
-                else this.Right.insertInOrder(d);
+                else this.Right.InsertInOrder(d);
             }
-            this.Size++;
+            this.size++;
         }
 
+        public int Size()
+        {
+            return this.size;
+        }
         public bool IsBST()
         {
             if (this.Left != null)
