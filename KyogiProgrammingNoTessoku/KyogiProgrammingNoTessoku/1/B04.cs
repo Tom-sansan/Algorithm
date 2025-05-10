@@ -51,6 +51,18 @@ namespace KyogiProgrammingNoTessoku._1
                 // 出力
                 Console.WriteLine(result);
             */
+
+            /* 別解2
+                // 入力
+                string N = Console.ReadLine();
+
+                // Convert.ToInt32 を使用して基数2（2進数）から変換
+                // 第1引数: 変換する文字列
+                // 第2引数: 変換元の基数
+                int result = Convert.ToInt32(N, 2);
+                // 出力
+                Console.WriteLine(result);
+            */
         }
     }
 }
